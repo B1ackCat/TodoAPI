@@ -12,7 +12,7 @@ class Todo_index(viewsets.ModelViewSet):
     serializer_class = Todo_Serializer
 
 class Todo_main(ListAPIView):
-    queryset = Todo_list.objects.all()
+    queryset = Todo_list.objects.all().order_by('-created_at')
     serializer_class = Todo_Serializer
 
 class Todo_detail(RetrieveAPIView):
@@ -21,5 +21,5 @@ class Todo_detail(RetrieveAPIView):
     serializer_class = Todo_Detail_Serializer
 
 class Comment_index(viewsets.ModelViewSet):
-    queryset = Comment.objects.all()
+    queryset = Comment.objects.all().order_by('-created_at')
     serializer_class = Comment_Serializer
