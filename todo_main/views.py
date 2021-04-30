@@ -1,26 +1,25 @@
 from django.views import View
 from django.views import generic
 from rest_framework import viewsets
-from rest_framework.generics import ListAPIView, RetrieveAPIView
+from rest_framework.generics import ListAPIView, RetrieveAPIView, UpdateAPIView, DestroyAPIView
 
-from .models import Todo, Comment
-from .serializers import TodoSerializer, TodoDetailSerializer, CommentSerializer
+from .models import Todo_list, Comment
+from .serializers import Todo_Serializer, Todo_Detail_Serializer, Comment_Serializer
 
 
-class TodoIndex(viewsets.ModelViewSet):
-    queryset = Todo.objects.all()
-    serializer_class = TodoSerializer
+class Todo_index(viewsets.ModelViewSet):
+    queryset = Todo_list.objects.all()
+    serializer_class = Todo_Serializer
 
-class TodoMain(ListAPIView):
-    queryset = Todo.objects.all()
-    serializer_class = TodoSerializer
+class Todo_main(ListAPIView):
+    queryset = Todo_list.objects.all()
+    serializer_class = Todo_Serializer
 
-class TodoDetail(RetrieveAPIView):
+class Todo_detail(RetrieveAPIView):
     lookup_field = 'id'
-    queryset = Todo.objects.all()
-    serializer_class = TodoDetailSerializer
+    queryset = Todo_list.objects.all()
+    serializer_class = Todo_Detail_Serializer
 
-class CommentIndex(viewsets.ModelViewSet):
+class Comment_index(viewsets.ModelViewSet):
     queryset = Comment.objects.all()
-    serializer_class = CommentSerializer
-
+    serializer_class = Comment_Serializer
