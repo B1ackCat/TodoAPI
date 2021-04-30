@@ -1,5 +1,3 @@
-from django.views import View
-from django.views import generic
 from rest_framework import viewsets
 from rest_framework.generics import ListAPIView, RetrieveAPIView
 
