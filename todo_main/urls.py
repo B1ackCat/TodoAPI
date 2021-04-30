@@ -8,8 +8,8 @@ from . import views
 app_name = 'todo_main'
 
 router = routers.DefaultRouter()
-router.register(r'todos',views.Todo_index)
-router.register(r'comment', views.Comment_index)
+router.register(r'todos',views.TodoIndex)
+router.register(r'comment', views.CommentIndex)
 
 urlpatterns = [
     url('api-auth/', include('rest_framework.urls')),
