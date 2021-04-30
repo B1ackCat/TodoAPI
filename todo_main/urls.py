@@ -8,13 +8,13 @@ from . import views
 app_name = 'todo_main'
 
 router = routers.DefaultRouter()
-router.register(r'todos',views.Todo_index)
-router.register(r'comment', views.Comment_index)
+router.register(r'todos',views.TodoIndex)
+router.register(r'comment', views.CommentIndex)
 
 urlpatterns = [
     url('api-auth/', include('rest_framework.urls')),
     url(r'^', include(router.urls)), #index
-    url(r'^todos/$', views.Todo_main.as_view(), name='todo_list'), #list
+    url(r'^todos/$', views.TodoMain.as_view(), name='todo_list'), #list
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

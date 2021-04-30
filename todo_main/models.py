@@ -1,6 +1,6 @@
 from django.db import models
 
-class Todo_list(models.Model):
+class Todo(models.Model):
     id = models.AutoField(db_column='ID', primary_key = True)
     title = models.CharField(db_column='TITLE', max_length=200)
     is_completed = models.BooleanField(db_column='IS_COMPLETED')
