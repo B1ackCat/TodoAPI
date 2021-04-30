@@ -8,7 +8,7 @@ from .serializers import Todo_Serializer, Todo_Detail_Serializer, Comment_Serial
 
 
 class Todo_index(viewsets.ModelViewSet):
-    queryset = Todo_list.objects.all().order_by('-created_at')
+    queryset = Todo_list.objects.all()
     serializer_class = Todo_Serializer
 
 class Todo_main(ListAPIView):
@@ -17,7 +17,7 @@ class Todo_main(ListAPIView):
 
 class Todo_detail(RetrieveAPIView):
     lookup_field = 'id'
-    queryset = Todo_list.objects.all().order_by('-created_at')
+    queryset = Todo_list.objects.all()
     serializer_class = Todo_Detail_Serializer
 
 class Comment_index(viewsets.ModelViewSet):
