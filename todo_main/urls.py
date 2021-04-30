@@ -14,7 +14,7 @@ router.register(r'comment', views.Comment_index)
 urlpatterns = [
     url('api-auth/', include('rest_framework.urls')),
     url(r'^', include(router.urls)), #index
-    url(r'^todos/$', views.Todo_main.as_view(), name='todo_list'), #list
+    url(r'^todos/$', views.TodoMain.as_view(), name='todo_list'), #list
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
