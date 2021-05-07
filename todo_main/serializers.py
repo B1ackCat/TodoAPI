@@ -1,17 +1,17 @@
-from .models import Todo_list, Comment
+from .models import TodoList, Comment
 from rest_framework import serializers
 
-class Todo_Serializer(serializers.HyperlinkedModelSerializer):
+class TodoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Todo_list
+        model = TodoList
         fields = ('id', 'title', 'description','is_completed','created_at','updated_at')
 
-class Todo_Detail_Serializer(serializers.HyperlinkedModelSerializer):
+class TodoDetailSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Todo_list
+        model = TodoList
         fields = ('title', 'description', 'is_completed', 'updated_at')
 
-class Comment_Serializer(serializers.HyperlinkedModelSerializer):
+class CommentSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Comment
         fields = ('id', 'contents', 'created_at', 'updated_at')
