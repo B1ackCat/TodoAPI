@@ -11,5 +11,7 @@ How to use:
 URL LIST  
 /todos/ : Show Todo_list  
 /comment/ : Show comment  
-/todos/{id} : show todo<id> detail  
-/comment/{id} : show comment<id> detail  
+/todos/{id} : Show todo<id> detail  
+/comment/{id} : Show comment<id> detail  
+/docs/ : Show API Documents  
+/swagger/ : Show API Documents
