@@ -1,7 +1,7 @@
 # TodoAPI
 Simple TodoAPI H1
 
-How to use:
+How to use:  
 1.pip install -r requirements.txt  
 2.Create Mysql DB "todo_app" (Change Settings.py DataBase setting)  
 3.python manage.py makemigrations  
